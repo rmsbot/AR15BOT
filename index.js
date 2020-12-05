@@ -175,7 +175,13 @@ else if (text == '#donasi'){
 conn.sendMessage(id, ' *Menampilkan Donasi!!!* ' ,MessageType.text);
 }
 else if (text == '#creator'){
-conn.sendMessage(id, ' *Creator AR15BOT wa.me/+6285722553839* ' ,MessageType.text);
+conn.sendMessage(id, ' *Creator ItsmeikyXSec40* ' ,MessageType.text);
+}
+else if (text == '!menu'){
+conn.sendMessage(id, ' *Perintah Memanggil Bot Salah* ' ,MessageType.text);
+}
+else if (text == '!help'){
+conn.sendMessage(id, ' *Perintah Memanggil Bot Salah* ' ,MessageType.text);
 }
 else if (text == 'Pagi'){
 conn.sendMessage(id, ' _Pagi juga, Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#help* untuk melihat fitur bot kami🙏_ ' ,MessageType.text);
