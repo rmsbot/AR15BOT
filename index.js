@@ -516,14 +516,6 @@ axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes("!buciner")){
-const teks = text.replace(/!gay /, "")
-axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
-	conn.sendMessage(id,  [WAIT] Proses...❗ , MessageType.text)
-    let hasil = ` ${res.data.desc} \n\n *Persen Bucin Lo!!!* _${res.data.persen}_`;
-    conn.sendMessage(id, hasil ,MessageType.text);
-})
-}
 if (text.includes("!spamsms")){
 const teks = text.replace(/!spamsms /, "")
 axios.get(`https://arugaz.herokuapp.com/api/spamsms?no=${teks}&jum=20`).then((res) => {
