@@ -151,7 +151,7 @@ else if (text == 'Asu'){
 conn.sendMessage(id, 'Lu Asw' ,MessageType.text);
 }
 else if (text == '#owner'){
-conn.sendMessage(id, ' *Owner AR15BOT wa.me/+6285722553839* ' ,MessageType.text);
+conn.sendMessage(id, ' *Owner ItsmeikyXSec404* ' ,MessageType.text);
 }
 else if (text == '#help'){
 conn.sendMessage(id, ' *Menampilkan Pilihan Menu!!!* ' ,MessageType.text);
@@ -294,7 +294,7 @@ if (text.includes('!nulis')){
 }
 if (text.includes('!tts')){
   var teks = text.replace(/!tts /, '')
-    axios.get('http://scrap.terhambar.com/tts?kata=${teks}')
+    axios.get('https://rest.farzain.com/api/tts.php?id=${teks}')
     .then((res) => {
       audioToBase64(res.data.result)
         .then(
@@ -516,6 +516,14 @@ axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes("!buciner")){
+const teks = text.replace(/!gay /, "")
+axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
+	conn.sendMessage(id,  [WAIT] Proses...❗ , MessageType.text)
+    let hasil = ` ${res.data.desc} \n\n *Persen Bucin Lo!!!* _${res.data.persen}_`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes("!spamsms")){
 const teks = text.replace(/!spamsms /, "")
 axios.get(`https://arugaz.herokuapp.com/api/spamsms?no=${teks}&jum=20`).then((res) => {
@@ -550,7 +558,7 @@ conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
 }
 if (text.includes("!resep")){
 const teks = text.replace(/!resep /, "")
-axios.get(`https://masak-apa.tomorisakura.vercel.app/api/search/?q=${teks}`).then((res) => {
+axios.get(`https://arugaz.herokuapp.com/api/resep?query=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
     let hasil = ` *Judul:* ${results.title}\n*Penulis:* ${results.author.user}\n*Rilis:* ${results.author.datePublished}\n*Level:* ${results.dificulty}\n*Waktu:* ${results.times}\n*Porsi:* ${results.servings}\n\n*Bahan-bahan:*\n${bahan}\n\n*Step-by-step:*\n${tutor}`;
     conn.sendMessage(id, hasil ,MessageType.text);
