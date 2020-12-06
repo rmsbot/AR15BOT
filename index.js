@@ -994,7 +994,7 @@ else if (text == '#menu3'){
 conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾Itsmeiky BOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/itsmeikyxse 404' ,MessageType.text);
 }
 else if (text == '#menuall'){
-conn.sendMessage(id,   _🗣️Thanks Telah Menggunakan BOT *👾Itsmeiky BOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/itsmeikyxse 404  ,MessageType.text);
+conn.sendMessage(id, '_🗣️Thanks Telah Menggunakan BOT *👾Itsmeiky BOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/itsmeikyxse 404'  ,MessageType.text);
 }
 else if (text == '#menu4'){
 conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾ITSMEIKY BOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/itsmeikyxsec404' ,MessageType.text);
