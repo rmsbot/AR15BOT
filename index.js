@@ -166,7 +166,7 @@ conn.sendMessage(id, ' *Menampilkan Fitur Menu2!!!* ' ,MessageType.text);
 else if (text == '#menu3'){
 conn.sendMessage(id, ' *Menampilkan Fitur Menu3!!!* ' ,MessageType.text);
 }
-else if (text ==  #menuall ){
+else if (text == '#menuall'){
 conn.sendMessage(id,   *Menampilkan Full Menu!!!*   ,MessageType.text);
 }
 else if (text == '#menu4'){
