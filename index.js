@@ -32,6 +32,7 @@ const aris1 = require("./lib/aris1.js");
 const aris2 = require("./lib/aris2.js");
 const aris3 = require("./lib/aris3.js");
 const aris4 = require("./lib/aris4.js");
+const aris4 = require("./lib/menuall.js");
 const readTextInImage = require('./lib/ocr')
 //A187ID
 const
