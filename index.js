@@ -166,6 +166,9 @@ conn.sendMessage(id, ' *Menampilkan Fitur Menu2!!!* ' ,MessageType.text);
 else if (text == '#menu3'){
 conn.sendMessage(id, ' *Menampilkan Fitur Menu3!!!* ' ,MessageType.text);
 }
+else if (text ==  #menuall ){
+conn.sendMessage(id,   *Menampilkan Full Menu!!!*   ,MessageType.text);
+}
 else if (text == '#menu4'){
 conn.sendMessage(id, ' *Menampilkan Fitur Menu4!!!* ' ,MessageType.text);
 }
@@ -713,6 +716,43 @@ var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + ta
 var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, aris3.aris3(id, A187, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwhatsapp, youtube) ,MessageType.text);
 }
+if (text == '#menuall'){
+const corohelp = await get.get( https://covid19.mathdro.id/api/countries/id ).json()
+var date = new Date();
+var tahun = date.getFullYear();
+var bulan = date.getMonth();
+var tanggal = date.getDate();
+var hari = date.getDay();
+var jam = date.getHours();
+var menit = date.getMinutes();
+var detik = date.getSeconds();
+switch(hari) {
+ case 0: hari = "Minggu"; break;
+ case 1: hari = "Senin"; break;
+ case 2: hari = "Selasa"; break;
+ case 3: hari = "Rabu"; break;
+ case 4: hari = "Kamis"; break;
+ case 5: hari = "Jum at"; break;
+ case 6: hari = "Sabtu"; break;
+}
+switch(bulan) {
+ case 0: bulan = "Januari"; break;
+ case 1: bulan = "Februari"; break;
+ case 2: bulan = "Maret"; break;
+ case 3: bulan = "April"; break;
+ case 4: bulan = "Mei"; break;
+ case 5: bulan = "Juni"; break;
+ case 6: bulan = "Juli"; break;
+ case 7: bulan = "Agustus"; break;
+ case 8: bulan = "September"; break;
+ case 9: bulan = "Oktober"; break;
+ case 10: bulan = "November"; break;
+ case 11: bulan = "Desember"; break;
+}
+var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
+var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
+conn.sendMessage(id, menuall.menuall(id, A187, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwhatsapp, youtube) ,MessageType.text);
+}
 if (text == '#menu4'){
 const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
 var date = new Date();
@@ -952,6 +992,9 @@ conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾Itsmeiky BOT�
 }
 else if (text == '#menu3'){
 conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾Itsmeiky BOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/itsmeikyxse 404' ,MessageType.text);
+}
+else if (text == '#menuall'){
+conn.sendMessage(id,   _🗣️Thanks Telah Menggunakan BOT *👾Itsmeiky BOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/itsmeikyxse 404  ,MessageType.text);
 }
 else if (text == '#menu4'){
 conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾ITSMEIKY BOT👾* , Follow Instagram Mimin Yah😻 : https://instagram.com/itsmeikyxsec404' ,MessageType.text);
