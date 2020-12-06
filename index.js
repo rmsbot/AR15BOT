@@ -208,6 +208,12 @@ conn.sendMessage(id, 'Jangan toxic anjing,kntl,babi,monyet' ,MessageType.text);
 else if (text == 'Bacot'){
 conn.sendMessage(id, ' *lu bacot_-* ' ,MessageType.text);
 }
+else if (text == 'Pagi Lord'){
+conn.sendMessage(id, ' Pagi Juga Lord, Perlu Bantuan Bot Silahkan Ketik *#help* Ya Lord ' ,MessageType.text);
+}
+else if (text == 'Pagi lord'){
+conn.sendMessage(id, ' _Pagi Juga Lord, Perlu Bantuan Bot Silahkan Ketik *#help* Ya Lord_   ,MessageType.text);
+}
 else if (text == 'Test'){
 conn.sendMessage(id, ' _Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#help* untuk melihat fitur bot kami🙏_ ' ,MessageType.text);
 }
