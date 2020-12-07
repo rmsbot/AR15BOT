@@ -1,4 +1,4 @@
-/*
+9/*
 * JANGAN UBAH-UBAH INFO!!!
 * "JANGAN MODAL NAMA DOANG BRO!!!"
 * SCRIPT BY ARIS187 ID
@@ -215,7 +215,7 @@ else if (text == 'Pagi Lord'){
 conn.sendMessage(id, ' Pagi Juga Lord, Perlu Bantuan Bot Silahkan Ketik *#help* Ya Lord ' ,MessageType.text);
 }
 else if (text == 'Pagi lord'){
-conn.sendMessage(id, ' _Pagi Juga Lord, Perlu Bantuan Bot Silahkan Ketik *#help* Ya Lord_   ,MessageType.text);
+conn.sendMessage(id, ' _Pagi Juga Lord, Perlu Bantuan Bot Silahkan Ketik *#help* Ya Lord_ ' ,MessageType.text);
 }
 else if (text == 'Test'){
 conn.sendMessage(id, ' _Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#help* untuk melihat fitur bot kami🙏_ ' ,MessageType.text);
