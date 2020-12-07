@@ -307,7 +307,7 @@ if (text.includes('!nulis')){
 }
 if (text.includes('!tts')){
   var teks = text.replace(/!tts /, '')
-    axios.get('https://rest.farzain.com/api/tts.php?id=${teks}')
+    axios.get(`https://rest.farzain.com/api/tts.php?id=${teks}`)
     .then((res) => {
       audioToBase64(res.data.result)
         .then(
@@ -514,7 +514,7 @@ axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
 
 if (text.includes("!tts")){
 const teks = text.replace(/!tts /, "")
-axios.get(`http://scrap.terhambar.com/tts?kata=${teks}`).then((res) => {
+axios.get(`https://rest.farzain.com/api/tts.php?id=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
     let hasil = `${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.audio);
