@@ -443,7 +443,7 @@ if (text.includes("!bitly")){
 const teks = text.replace(/!bitly /, "")
 axios.get(`https://rest.farzain.com/api/url.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Sedang Membuat Link...❗', MessageType.text)
-    let hasil = `nih kak :) \n\n${res.data.status.url.creator}`;
+    let hasil = `nih kak :) \n\n${res.status.url.creator}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -531,7 +531,7 @@ if (text.includes("!brainly")){
 const teks = text.replace(/!brainly /, "")
 axios.get(`https://rest.farzain.com/api/brainly.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
 conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-    let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.data.title.url}_ `;
+    let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.title.url}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
