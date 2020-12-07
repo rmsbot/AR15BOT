@@ -588,7 +588,7 @@ axios.get(`https://api.terhambar.com/ninja?nama=${teks}`).then((res) => {
 if (text.includes("!createqts")){
 const teks = text.replace(/!createqts /, "")
 axios.get(`https://terhambar.com/aw/qts/?kata=${teks}`).then((res) => {
-	conn.sendMessage(id,  [WAIT] Sedang Membuat Quotes...❗ , MessageType.text)
+	conn.sendMessage(id, '[WAIT] Sedang Membuat Quotes...❗', MessageType.text)
     let hasil = `Nih Kak Hasilnya :\n\n${res.kata.author.tipe}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
