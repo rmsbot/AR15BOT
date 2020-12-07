@@ -441,8 +441,8 @@ axios.get('https://api.banghasan.com/quran/format/json/acak').then((res) => {
 }
 if (text.includes("!bitly")){
 const teks = text.replace(/!bitly /, "")
-axios.get(`https://api.haipbis.xyz/bitly?url=${teks}`).then((res) => {
-	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+axios.get(`https://rest.farzain.com/api/url.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Sedang Membuat Link...❗', MessageType.text)
     let hasil = `nih kak :) \n\n${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -511,7 +511,6 @@ axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-
 if (text.includes("!tts")){
 const teks = text.replace(/!tts /, "")
 axios.get(`https://rest.farzain.com/api/tts.php?id=${teks}`).then((res) => {
@@ -520,12 +519,19 @@ axios.get(`https://rest.farzain.com/api/tts.php?id=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.audio);
 })
 }
-
 if (text.includes("!infoanime")){
 const teks = text.replace(/!infoanime /, "")
 axios.get(`https://arugaz.herokuapp.com/api/dewabatch?q=${teks}`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
     let hasil = ` *INFO ANIME ${teks} :* \n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes("!brainly")){
+const teks = text.replace(/!brainly /, "")
+axios.get(`https://rest.farzain.com/api/brainly.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
+conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.data.result}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
