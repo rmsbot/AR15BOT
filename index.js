@@ -134,7 +134,7 @@ else if (text == 'salam'){
 conn.sendMessage(id, ' _Waalaikumsalam, Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#help* untuk melihat fitur bot kami🙏_ ' ,MessageType.text);
 }
 else if (text == '#help'){
-conn.sendMessage(id,   _Untuk Memasukan Perintah Nya Jangan Sampe Di Tag Ya Kak Supaya Word🙏_ ' ,MessageType.text);
+conn.sendMessage(id, ' _Untuk Memasukan Perintah Nya Jangan Sampe Di Tag Ya Kak Supaya Word🙏_ ' ,MessageType.text);
 }
 else if (text == 'asalamualaikum'){
 conn.sendMessage(id, ' _Waalaikumsalam, Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#help* untuk melihat fitur bot kami🙏_ ' ,MessageType.text);
