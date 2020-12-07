@@ -466,7 +466,7 @@ conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
 if (text.includes("!puisi3")){
 const teks = text.replace(/!puisi3 /, "")
 axios.get(`https://arugaz.herokuapp.com/api/puisi2`).then((res) => {
-conn.sendMessage(id,  [WAIT] Searching...❗ , MessageType.text)
+conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
     let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.data.result}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
