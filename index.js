@@ -585,6 +585,14 @@ axios.get(`https://api.terhambar.com/ninja?nama=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes("!createqts")){
+const teks = text.replace(/!createqts /, "")
+axios.get(`https://terhambar.com/aw/qts/?kata=${teks}`).then((res) => {
+	conn.sendMessage(id,  [WAIT] Sedang Membuat Quotes...❗ , MessageType.text)
+    let hasil = `Nih Kak Hasilnya :\n\n${res.kata.author.tipe}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text == '#help'){
 const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
 var date = new Date();
@@ -1083,7 +1091,7 @@ _${kata}_
    {
     var items = ["waifu","anime waifu"];
     var anim = items[Math.floor(Math.random() * items.length)];
-    var url = "https://arugaz.herokuapp.com/api/waifu";
+    var url = "https://alfians-api.herokuapp.com/api/waifu";
     
     axios.get(url)
       .then((result) => {
