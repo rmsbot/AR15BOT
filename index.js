@@ -133,6 +133,9 @@ conn.sendMessage(id, ' _3aalaikumsalam, _Iyah aku disini kak...ada yang bisa kam
 else if (text == 'salam'){
 conn.sendMessage(id, ' _Waalaikumsalam, Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#help* untuk melihat fitur bot kami🙏_ ' ,MessageType.text);
 }
+else if (text == '#help'){
+conn.sendMessage(id,   _Untuk Memasukan Perintah Nya Jangan Sampe Di Tag Ya Kak Supaya Word🙏_ ' ,MessageType.text);
+}
 else if (text == 'asalamualaikum'){
 conn.sendMessage(id, ' _Waalaikumsalam, Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#help* untuk melihat fitur bot kami🙏_ ' ,MessageType.text);
 }
@@ -456,6 +459,14 @@ if (text.includes("!puisi2")){
 const teks = text.replace(/!puisi2 /, "")
 axios.get(`https://arugaz.herokuapp.com/api/puisi3`).then((res) => {
 conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes("!puisi3")){
+const teks = text.replace(/!puisi3 /, "")
+axios.get(`https://arugaz.herokuapp.com/api/puisi2`).then((res) => {
+conn.sendMessage(id,  [WAIT] Searching...❗ , MessageType.text)
     let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.data.result}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -1072,7 +1083,7 @@ _${kata}_
    {
     var items = ["waifu","anime waifu"];
     var anim = items[Math.floor(Math.random() * items.length)];
-    var url = "https://api.haipbis.xyz/waifu";
+    var url = "https://arugaz.herokuapp.com/api/waifu";
     
     axios.get(url)
       .then((result) => {
