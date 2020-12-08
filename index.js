@@ -299,25 +299,19 @@ if (text.includes('!nulis')){
       imageToBase64(res.data.result)
         .then(
           (ress) => {
-            conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+            conn.sendMessage(id, '[WAIT] Sedang Menulis Kak...❗', MessageType.text)
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, buf, MessageType.image)
         })
     })
 }
-if (text.includes('!tts')){
-  var teks = text.replace(/!tts /,   )
-    axios.get('http://scrap.terhambar.com/tts?kata=${teks}')
-    .then((res) => {
-      audioToBase64(res.data.result)
-        .then(
-          (ress) => {
-            conn.sendMessage(id, '[WAIT] Sedang Membuat Vn...❗', MessageType.text)
-            var buf = Buffer.from(ress,  base64 )
-            conn.sendMessage(id, buf, MessageType.audio)
-        })
-    })
+
+if (text.includes("!tts")){
+const teks = text.replace(/!tts /, "")
+const gtts = (`https://rest.farzain.com/api/tts.php?id=${teks}`)
+    conn.sendMessage(id, gtts ,MessageType.text);
 }
+
 if (text.includes("!ytmp3")){
 const teks = text.replace(/!ytmp3 /, "")
 axios.get(`https://alfians-api.herokuapp.com/api/yta?url=${teks}`).then((res) => {
@@ -377,8 +371,6 @@ axios.get(`https://mhankbarbar.herokuapp.com/api/twit?url=${teks}&apiKey=zFuV88p
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-
-
 
 if (text.includes("!tiktok")) {
 const tictoc = text.replace(/!tiktok /, "")
@@ -450,7 +442,7 @@ if (text.includes("!bitly")){
 const teks = text.replace(/!bitly /, "")
 axios.get(`https://rest.farzain.com/api/url.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Sedang Membuat Link...❗', MessageType.text)
-    let hasil = `nih kak :) \n\n${res.status.url.creator}`;
+    let hasil = `nih kak :) \n\n${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -526,19 +518,13 @@ axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+
 if (text.includes("!tts")){
-  var teks = text.replace(/!tts /, "")
-    axios.get('http://scrap.terhambar.com/tts?kata=${teks}')
-    .then((res) => {
-      audioToBase64(res.data.result)
-        .then(
-          (ress) => {
-            conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-            var buf = Buffer.from(ress,  base64 )
-            conn.sendMessage(id, buf, MessageType.audio)
-        })
-    })
+const teks = text.replace(/!tts /, "")
+const gtts = (`https://rest.farzain.com/api/tts.php?id=${teks}`)
+    conn.sendMessage(id, gtts ,MessageType.text);
 }
+
 if (text.includes("!infoanime")){
 const teks = text.replace(/!infoanime /, "")
 axios.get(`https://arugaz.herokuapp.com/api/dewabatch?q=${teks}`).then((res) => {
@@ -551,7 +537,7 @@ if (text.includes("!brainly")){
 const teks = text.replace(/!brainly /, "")
 axios.get(`https://rest.farzain.com/api/brainly.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
 conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-    let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.title.url}_ `;
+    let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.data.result}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
