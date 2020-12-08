@@ -479,9 +479,17 @@ conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes("!cersex")){
+if (text.includes("!cersex1")){
 const teks = text.replace(/!cersex /, "")
 axios.get(`https://arugaz.herokuapp.com/api/cersex2`).then((res) => {
+conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Nih cersex Kak :)*\n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes("!cersex2")){
+const teks = text.replace(/!cersex /, "")
+axios.get(`https://arugaz.herokuapp.com/api/cersex1`).then((res) => {
 conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
     let hasil = ` *Nih cersex Kak :)*\n\n _${res.data.result}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
