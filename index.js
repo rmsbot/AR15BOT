@@ -169,8 +169,35 @@ conn.sendMessage(id, ' *Menampilkan Fitur Menu2!!!* ' ,MessageType.text);
 else if (text == '#menu3'){
 conn.sendMessage(id, ' *Menampilkan Fitur Menu3!!!* ' ,MessageType.text);
 }
+else if (text ==  '!help'){
+conn.sendMessage(id, ' *Perintah Memanggil BOT Salah Anjim* ' ,MessageType.text);
+}
+else if (text == 'memek'){
+conn.sendMessage(id, ' *Iya Memek Lo Bau - BOT!!!* ' ,MessageType.text);
+}
+else if (text == 'Memek'){
+conn.sendMessage(id, ' *Gw Bilang Apa Memek Lo Yang Bau - BOT!!!* ' ,MessageType.text);
+}
+else if (text == 'kontol'){
+conn.sendMessage(id, ' *Iya Kontol Lo Bau Ajg!!!* ' ,MessageType.text);
+}
+else if (text ==  'Kontol'){
+conn.sendMessage(id, ' * Iya Kontol Lo Bau Ajg - BOT!!!* '  ,MessageType.text);
+}
+else if (text ==  'Meki'){
+conn.sendMessage(id, ' *Meki Lo Berkuah - BOT!!!* ' ,MessageType.text);
+}
+else if (text == 'meki'){
+conn.sendMessage(id, ' *Meki Lo Berkuah Ajg - BOT* ' ,MessageType.text);
+}
 else if (text == '#menuall'){
 conn.sendMessage(id, ' *Menampilkan Full Menu!!!* ' ,MessageType.text);
+}
+else if (text == 'Hemker'){
+conn.sendMessage(id, ' *Kabur Ada Hemker - BOT!!!* ' ,MessageType.text);
+}
+else if (text == 'hemker'){
+conn.sendMessage(id, ' *Kabur Ada Hemker - BOT* ' ,MessageType.text);
 }
 else if (text == '#menu4'){
 conn.sendMessage(id, ' *Menampilkan Fitur Menu4!!!* ' ,MessageType.text);
