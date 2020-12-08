@@ -306,19 +306,18 @@ if (text.includes('!nulis')){
     })
 }
 if (text.includes('!tts')){
-  var teks = text.replace(/!tts /, '')
-    axios.get(`https://rest.farzain.com/api/tts.php?id=${teks}`)
+  var teks = text.replace(/!tts /,   )
+    axios.get( http://scrap.terhambar.com/tts?kata=${teks} )
     .then((res) => {
       audioToBase64(res.data.result)
         .then(
           (ress) => {
-            conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, '[WAIT] Sedang Membuat Vn...❗', MessageType.text)
+            var buf = Buffer.from(ress,  base64 )
             conn.sendMessage(id, buf, MessageType.audio)
         })
     })
 }
-
 if (text.includes("!ytmp3")){
 const teks = text.replace(/!ytmp3 /, "")
 axios.get(`https://alfians-api.herokuapp.com/api/yta?url=${teks}`).then((res) => {
@@ -341,6 +340,14 @@ if (text.includes("!infogempa")){
   conn.sendMessage(id, '[WAIT] Searching...⏳', MessageType.text)
   let hasil = ` *INFO GEMPA* \n\ *Lokasi* : _${res.data.lokasi}_ \n *Kedalaman✍️* : _${res.data.kedalaman}_ \n *Koordinat✍️* : _${res.data.koordinat}_ \n *Magnitude✍️* : _${res.data.magnitude}_ \n *Waktu✍️* : _${res.data.waktu}_ `;
   conn.sendMessage(id, hasil, MessageType.text);
+})
+}
+if (text.includes("!tiktok")) {
+const tictoc = text.replace(/!tiktok /, "")
+axios.get(`http://scrap.terhambar.com/tiktokfull?link=${tictoc}`).then((res) => {
+	 conn.sendMessage(id, '[WAIT] Sedang Download Videonya Gan...❗', MessageType.text)
+     let titoe = `âœ…Berhasil$$$ Silahkan klik link dibawah ini untuk mendownload hasilnya$ \nKlik link dibawahðŸ—¡ï¸\n\nJudul: ${res.data.deskripsi} \n\nDurasi: ${res.data.durasi}\n\nNama: ${res.data.nama}\n\nUrl: ${res.data.urlvideo}`;
+conn.sendMessage(id, titoe, MessageType.text);
 })
 }
 if (text.includes("!chord")){
