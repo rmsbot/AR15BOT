@@ -442,7 +442,7 @@ if (text.includes("!bitly")){
 const teks = text.replace(/!bitly /, "")
 axios.get(`https://rest.farzain.com/api/url.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Sedang Membuat Link...❗', MessageType.text)
-    let hasil = `nih kak :) \n\n${res.data.result}`;
+    let hasil = `nih kak :) \n\n${res.data.result.url}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
