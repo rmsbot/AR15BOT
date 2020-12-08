@@ -1059,6 +1059,8 @@ conn.sendMessage(id, ' _🗣️Thanks Telah Menggunakan BOT *👾ITSMEIKY BOT�
          } = require("child_process");
          exec('cwebp -q 50 ' + stiker + ' -o temp/' + jam + '.webp', (error, stdout, stderr) =>
          {
+            let pesan = `[ WAIT ] Sedang Proses Membuat Sticker Tunggu Ya Kak 🥰`;
+         conn.sendMessage(id, pesan, MessageType.text);
             let stik = fs.readFileSync('temp/' + jam + '.webp')
             conn.sendMessage(id, stik, MessageType.sticker)
          });
