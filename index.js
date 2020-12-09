@@ -350,6 +350,14 @@ axios.get(`https://alfians-api.herokuapp.com/api/yta?url=${teks}`).then((res) =>
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes("!randomquotespic")){
+const teks = text.replace(/%randomquotespic/, "")
+axios.get(`http://inspirobot.me/api?generate=true`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` \n\n _${res.data.result}_  `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes("!simi")){
 const teks = text.replace(/%s /, "")
 axios.get(`https://st4rz.herokuapp.com/api/simsimi?kata=${teks}`).then((res) => {
