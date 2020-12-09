@@ -151,6 +151,9 @@ conn.sendMessage(id, ' _Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#
 else if (text == 'Halo'){
 conn.sendMessage(id, ' _Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#help* untuk melihat fitur bot kami, Untuk Perintah Jangan Di Tag Ya🙏_ ' ,MessageType.text);
 }
+else if (text == '#simi'){
+conn.sendMessage(id, ' _Iyah aku disini kak... untuk mengaktifkan fitur simi silahkan ketik_ "#simi (kata kata)" _mengerti kan kak terimakasih!_ ' ,MessageType.text);
+}
 else if (text == 'Asu'){
 conn.sendMessage(id, 'Lu Asw Ajg Gw Bot Lu Mau Apa Hah' ,MessageType.text);
 }
