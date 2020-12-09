@@ -595,7 +595,7 @@ axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
 if (text.includes("!ttp")){
 const teks = text.replace(/%ttp /, "")
 axios.get(`https://st4rz.herokuapp.com/api/ttp?kata=${teks}`).then((res) => {
-conn.sendMessage(id, [WAIT] Kalo linknya kepanjangan, maklumlah masih pemula xixixi 😅', MessageType.text)
+conn.sendMessage(id,'[WAIT] Kalo linknya kepanjangan, maklumlah masih pemula xixixi 😅'', MessageType.text)
     let hasil = ` Nih kak :> Maap kalo kepanjangan linknya 😓 \n\n _${res.data.result}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
