@@ -568,11 +568,42 @@ conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes("!animefilm")){
+const teks = text.replace(/%animefilm /, "")
+axios.get(`https://arugaz.herokuapp.com/api/sdmovie?film=${teks}`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *Film Anime ${teks} :* \n\n *Judul* _${res.data.result.title}_ \n\n *Rating* _${res.data.result.rating}_ \n\n *Info* _${res.data.result.sinopsis}_ \n\n *Link Video* _${res.data.result.video}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes("!resepbunda")){
+const teks = text.replace(/%resepbunda /, "")
+axios.get(`https://masak-apa.tomorisakura.vercel.app/api/search/?q=${teks}`).then((res) => {
+	conn.sendMessage(id, ![WAIT] Searching...❗!, MessageType.text)
+    let hasil = ` *Judul:* ${results.title}\n*Penulis:* ${results.author.user}\n*Rilis:* ${results.author.datePublished}\n*Level:* ${results.dificulty}\n*Waktu:* ${results.times}\n*Porsi:* ${results.servings}\n\n*Bahan-bahan:*\n${bahan}\n\n*Step-by-step:*\n${tutor}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes("!gay")){
 const teks = text.replace(/!gay /, "")
 axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
     let hasil = ` ${res.data.desc} \n\n *Persen Gay Lo!!!* _${res.data.persen}_`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes("!ttp")){
+const teks = text.replace(/%ttp /, "")
+axios.get(`https://st4rz.herokuapp.com/api/ttp?kata=${teks}`).then((res) => {
+conn.sendMessage(id, [WAIT] Kalo linknya kepanjangan, maklumlah masih pemula xixixi 😅', MessageType.text)
+    let hasil = ` Nih kak :> Maap kalo kepanjangan linknya 😓 \n\n _${res.data.result}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes("!igdwn")){
+const teks = text.replace(/%ig /, "")
+axios.get(`https://alfians-api.herokuapp.com/api/ig?url=${teks}`).then((res) => {
+    let hasil = `📥Download sendiri link error maaf\n\nLink: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
