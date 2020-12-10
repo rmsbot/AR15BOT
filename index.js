@@ -11,8 +11,8 @@
 const A187 = '👾Itsmeiky BOT👾'; // JANGAN UBAH-UBAH INFO!!!
 const instagram = 'https://instagram.com/itsmeikyxsec404'; // JANGAN UBAH-UBAH INFO!!!
 const nomer = 'Wa.me/+6281281872699'; // JANGAN UBAH-UBAH INFO!!!
-const aktif = 'Tergantung jaringan'; // JANGAN UBAH-UBAH INFO!!!
-const groupwhatsapp = 'https://chat.whatsapp.com/Hc3WJvWDziF3u63gCeCtI7'; // JANGAN UBAH-UBAH INFO!!!
+const aktif = 'Tergantung Kuota Selagi Ada Yang Donasi Pasti On Terus'; // JANGAN UBAH-UBAH INFO!!!
+const groupwhatsapp = 'https://chat.whatsapp.com/IABVod4NWrpB4PIl5rRxRy'; // JANGAN UBAH-UBAH INFO!!!
 const youtube = 'ITSMEIKY OFFICIAL'; // JANGAN UBAH-UBAH INFO!!!
 //A187ID
 const qrcode = require("qrcode-terminal");
