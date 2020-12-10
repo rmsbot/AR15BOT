@@ -1396,8 +1396,8 @@ if (text.includes("!pokemon"))
     var nama = gh.split("&")[0];
     var tanggal = gh.split("&")[1];
 axios.get(`http://arugaz.herokuapp.com/api/getzodiak?nama=${nama}&tgl-bln-thn=${tanggal}`).then((res) => {
-	conn.sendMessage(id,' ───❉ FRM BOT ❉──\n [WAIT] Proses...❗', MessageType.text)
-    let hasil = ` ───❉ FRM BOT ❉──\n *Nama:* ${res.data.nama}\n *Lahir:* ${res.data.lahir}\n *Usia:* ${res.data.usia}\n *Ultah:* ${res.data.ultah} lagi `;
+	conn.sendMessage(id,' ───❉ ITSMEIKY BOT ❉──\n [WAIT] Proses...❗', MessageType.text)
+    let hasil = ` ───❉ ITSMEIKY BOT ❉──\n *Nama:* ${res.data.nama}\n *Lahir:* ${res.data.lahir}\n *Usia:* ${res.data.usia}\n *Ultah:* ${res.data.ultah} lagi `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
