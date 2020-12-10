@@ -134,7 +134,7 @@ else if (text == 'salam'){
 conn.sendMessage(id, ' _Waalaikumsalam, Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#help* untuk melihat fitur bot kami🙏_ ' ,MessageType.text);
 }
 else if (text == '#help'){
-conn.sendMessage(id, ' _Untuk Memasukan Perintah Nya Jangan Sampe Di Tag Ya Kak Supaya Work🙏_ ' ,MessageType.text);
+conn.sendMessage(id, ' _Untuk Memasukan Perintah Nya Jangan Sampe Di Tag Ya Kak Supaya Word🙏_ ' ,MessageType.text);
 }
 else if (text == 'asalamualaikum'){
 conn.sendMessage(id, ' _Waalaikumsalam, Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#help* untuk melihat fitur bot kami🙏_ ' ,MessageType.text);
@@ -180,6 +180,9 @@ conn.sendMessage(id, ' *Iya Memek Lo Bau - BOT!!!* ' ,MessageType.text);
 }
 else if (text == 'Memek'){
 conn.sendMessage(id, ' *Gw Bilang Apa Memek Lo Yang Bau - BOT!!!* ' ,MessageType.text);
+}
+else if (text == '!selamat'){
+conn.sendMessage(id, ' *───❉ FRM BOT ❉──*\n Yeah. Dapat tulisan selamat ' ,MessageType.text);
 }
 else if (text == 'kontol'){
 conn.sendMessage(id, ' *Iya Kontol Lo Bau Ajg!!!* ' ,MessageType.text);
@@ -450,6 +453,13 @@ axios.get(`https://arugaz.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+
+if (text.includes("!!sfrom")){
+const teks = text.replace(/!!sfrom /, "")
+const sfrom = (`*───❉ ITSMEIKY BOT ❉──*\n ini link download dari savefrom \n\n https://savefrom.net/7/#url=${teks} \n\n Cara unduhnya⬇\n https://drive.google.com/file/d/1hrBvlPFpMTwB3N5mfcPeMUw1wR-vdqHc/view?usp=drivesdk`)
+    conn.sendMessage(id, sfrom ,MessageType.text);
+}
+
 if (text.includes("!wikien")){
 const teks = text.replace(/!wikien /, "")
 axios.get(`https://arugaz.herokuapp.com/api/wikien?q=${teks}`).then((res) => {
@@ -627,19 +637,6 @@ axios.get(`https://arugaz.herokuapp.com/api/dewabatch?q=${teks}`).then((res) => 
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes("!!nilai")){
-const teks = text.replace(/!!nilai /, "")
-const say = (`*───❉ITSMEIKY BOT❉──*\n Makasih. Anda menilai \n *${teks}* \n nilai tersebut sangat berharga bagiku`)
-    conn.sendMessage(id, say ,MessageType.text);
-}
-if (text.includes("!tinyurl")){
-const teks = text.replace(/!tinyurl /, "")
-axios.get(`https://tinyurl.com/api-create.php?url=${teks}`).then((res) => {
-	conn.sendMessage(id,' ───❉ FRM BOT ❉──\n [WAIT] Proses...❗', MessageType.text)
-    let hasil = ` ───❉ITSMEIKY BOT❉──\n *Link yang diperpendek dengan tinyurl* \n\n *link:* _${res.data}_ `;
-    conn.sendMessage(id, hasil ,MessageType.text);
-})
-}
 if (text.includes("!brainly")){
 const teks = text.replace(/!brainly /, "")
 axios.get(`https://rest.farzain.com/api/brainly.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
@@ -664,6 +661,13 @@ axios.get(`https://masak-apa.tomorisakura.vercel.app/api/search/?q=${teks}`).the
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+
+if (text.includes("!selamat")){
+const teks = text.replace(/!selamat /, "")
+const say = (`*───❉ ITSMEIKY BOT ❉──*\n yeah dapat tulisan selamat *${teks}* \n Selamat *${teks}* juga`)
+    conn.sendMessage(id, say ,MessageType.text);
+}
+
 if (text.includes("!gay")){
 const teks = text.replace(/!gay /, "")
 axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
@@ -687,6 +691,7 @@ axios.get(`https://alfians-api.herokuapp.com/api/ig?url=${teks}`).then((res) => 
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+
 if (text.includes("!spamsms")){
 const teks = text.replace(/!spamsms /, "")
 axios.get(`https://arugaz.herokuapp.com/api/spamsms?no=${teks}&jum=20`).then((res) => {
@@ -1391,23 +1396,13 @@ if (text.includes("!pokemon"))
     `, MessageType.text);
   });
   }
-  else if (text.includes("!cekumur ")) {
-    var gh = text.split("!cekumur ")[1];
+else if (text.includes("!!cekumur")) {
+    var gh = text.split("!!cekumur ")[1];
     var nama = gh.split("&")[0];
     var tanggal = gh.split("&")[1];
 axios.get(`http://arugaz.herokuapp.com/api/getzodiak?nama=${nama}&tgl-bln-thn=${tanggal}`).then((res) => {
-	conn.sendMessage(id,' ───❉ ITSMEIKY BOT ❉──\n [WAIT] Proses...❗', MessageType.text)
-    let hasil = ` ───❉ ITSMEIKY BOT ❉──\n *Nama:* ${res.data.nama}\n *Lahir:* ${res.data.lahir}\n *Usia:* ${res.data.usia}\n *Ultah:* ${res.data.ultah} lagi `;
-    conn.sendMessage(id, hasil ,MessageType.text);
-})
-}
-else if (text.includes("!!cekresi ")) {
-    var resi = text.split("!!cekresi ")[1];
-    var gh = gh.split("&")[0];
-    var kurir = gh.split("&")[1];
-axios.get(`https://api.terhambar.com/resi?resi=${resi}&kurir=${kurir}`).then((res) => {
-	conn.sendMessage(id,' ───❉ ITSMEIKY BOT ❉──\n [WAIT] Proses...❗', MessageType.text)
-    let hasil = ` ───❉ ITSMEIKY BOT ❉──\n *No.Resi:* ${res.data.waybill} \n *Kurir:* ${res.data.courier} \n *deskripsi:* ${res.data.description} \n ${res.data.result} `;
+	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
+    let hasil = ` ───❉ Nih Kak Hasilnya ❉──\n *Nama:* ${res.data.nama}\n *Lahir:* ${res.data.lahir}\n *Usia:* ${res.data.usia}\n *Ultah:* ${res.data.ultah} lagi *Zodiak:* Disembunyikan`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
