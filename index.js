@@ -938,7 +938,7 @@ var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, menuall.menuall(id, A187, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwhatsapp, youtube) ,MessageType.text);
 }
 if (text == '#S&K'){
-const corohelp = await get.get( https://covid19.mathdro.id/api/countries/id ).json()
+const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
 var date = new Date();
 var tahun = date.getFullYear();
 var bulan = date.getMonth();
