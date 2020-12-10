@@ -509,6 +509,14 @@ axios.get(`https://rest.farzain.com/api/url.php?id=${teks}&apikey=ak52i3Znv8VSaa
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes("!tinyurl")){
+const teks = text.replace(/!tinyurl /, "")
+axios.get(`https://tinyurl.com/api-create.php?url=${teks}`).then((res) => {
+	conn.sendMessage(id, '───❉ FRM BOT ❉──\n [WAIT] Proses...❗', MessageType.text)
+    let hasil = ` ───❉ FRM BOT ❉──\n *Link yang diperpendek dengan tinyurl* \n\n *link:* _${res.data}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes("!puisi1")){
 const teks = text.replace(/!puisi1 /, "")
 axios.get(`https://arugaz.herokuapp.com/api/puisi1`).then((res) => {
