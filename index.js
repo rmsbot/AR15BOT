@@ -632,8 +632,8 @@ const teks = text.replace(/!!nilai /, "")
 const say = (`*───❉ITSMEIKY BOT❉──*\n Makasih. Anda menilai \n *${teks}* \n nilai tersebut sangat berharga bagiku`)
     conn.sendMessage(id, say ,MessageType.text);
 }
-if (text.includes("!!tinyurl")){
-const teks = text.replace(/!!tinyurl /, "")
+if (text.includes("!tinyurl")){
+const teks = text.replace(/!tinyurl /, "")
 axios.get(`https://tinyurl.com/api-create.php?url=${teks}`).then((res) => {
 	conn.sendMessage(id,  ───❉ FRM BOT ❉──\n [WAIT] Proses...❗ , MessageType.text)
     let hasil = ` ───❉ITSMEIKY BOT❉──\n *Link yang diperpendek dengan tinyurl* \n\n *link:* _${res.data}_ `;
