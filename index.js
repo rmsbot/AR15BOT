@@ -311,7 +311,7 @@ conn.sendMessage(id, ' _Sama sama, semoga harimu menyenangkan :)_ ' ,MessageType
 else if (text == 'Makasih'){
 conn.sendMessage(id, ' _Sama sama, semoga harimu menyenangkan :)_ ' ,MessageType.text);
 }
-else if (text == '!S&K'){
+else if (text == '#S&K'){
 conn.sendMessage(id, ' *───❉ ITSMEIKY BOT ❉──*\n Tunggu... \n Memuat syarat dan ketentuan ' ,MessageType.text);
 }
 else if (text == 'thank'){
@@ -937,7 +937,7 @@ var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + ta
 var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, menuall.menuall(id, A187, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwhatsapp, youtube) ,MessageType.text);
 }
-if (text == '!S&K'){
+if (text == '#S&K'){
 const corohelp = await get.get( https://covid19.mathdro.id/api/countries/id ).json()
 var date = new Date();
 var tahun = date.getFullYear();
