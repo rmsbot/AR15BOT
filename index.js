@@ -1391,13 +1391,23 @@ if (text.includes("!pokemon"))
     `, MessageType.text);
   });
   }
-else if (text.includes("!!cekumur")) {
-    var gh = text.split("!!cekumur ")[1];
+  else if (text.includes("!cekumur ")) {
+    var gh = text.split("!cekumur ")[1];
     var nama = gh.split("&")[0];
     var tanggal = gh.split("&")[1];
 axios.get(`http://arugaz.herokuapp.com/api/getzodiak?nama=${nama}&tgl-bln-thn=${tanggal}`).then((res) => {
-	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
-    let hasil = ` ───❉ Nih Kak Hasilnya ❉──\n *Nama:* ${res.data.nama}\n *Lahir:* ${res.data.lahir}\n *Usia:* ${res.data.usia}\n *Ultah:* ${res.data.ultah} lagi *Zodiak:* Disembunyikan`;
+	conn.sendMessage(id,' ───❉ FRM BOT ❉──\n [WAIT] Proses...❗', MessageType.text)
+    let hasil = ` ───❉ FRM BOT ❉──\n *Nama:* ${res.data.nama}\n *Lahir:* ${res.data.lahir}\n *Usia:* ${res.data.usia}\n *Ultah:* ${res.data.ultah} lagi `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+else if (text.includes("!!cekresi ")) {
+    var resi = text.split("!!cekresi ")[1];
+    var gh = gh.split("&")[0];
+    var kurir = gh.split("&")[1];
+axios.get(`https://api.terhambar.com/resi?resi=${resi}&kurir=${kurir}`).then((res) => {
+	conn.sendMessage(id,' ───❉ ITSMEIKY BOT ❉──\n [WAIT] Proses...❗', MessageType.text)
+    let hasil = ` ───❉ ITSMEIKY BOT ❉──\n *No.Resi:* ${res.data.waybill} \n *Kurir:* ${res.data.courier} \n *deskripsi:* ${res.data.description} \n ${res.data.result} `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
