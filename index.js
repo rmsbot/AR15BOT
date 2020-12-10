@@ -116,7 +116,7 @@ conn.sendMessage(group.gid, "hello everyone", MessageType.extendedText) // say h
 }
 
 // FFA187ID
-if(text.includes("!cek")){
+if(text.includes("!cekk")){
 var num = text.replace(/!cek/ , "")
 var idn = num.replace("0","+62");
 
@@ -1478,8 +1478,8 @@ if (text.includes("!pokemon"))
     `, MessageType.text);
   });
   }
-else if (text.includes("!!cekumur")) {
-    var gh = text.split("!!cekumur ")[1];
+else if (text.includes("!cekumur")) {
+    var gh = text.split("!cekumur ")[1];
     var nama = gh.split("&")[0];
     var tanggal = gh.split("&")[1];
 axios.get(`http://arugaz.herokuapp.com/api/getzodiak?nama=${nama}&tgl-bln-thn=${tanggal}`).then((res) => {
