@@ -491,52 +491,6 @@ axios.get(`https://rest.farzain.com/api/url.php?id=${teks}&apikey=ak52i3Znv8VSaa
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes("!nekopoi")){
-  { const teks = text.replace(/.nekopoi /, "") 
-  axios.get(`https://mhankbarbar.herokuapp.com/api/nekopoi?url=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) =>{ 
-  let hasil = `➸ *nekopoi link tersedia* : ${res.data.judul}\n*result* : ${res.data.result}\n*dilihat* : ${res.data.dilihat}\n*tumbnail* : ${res.data.tumbnail}` 
-  conn.sendMessage(id, hasil, MessageType.text); 
- })
- }
-if (text.includes("!memecreate")){
-  var teks = text.replace(/.memecreate /, '' )
-    axios.get(`https://mnazria.herokuapp.com/api/create-meme?text-atas=${teks}`).then((res) => {
-      imageToBase64(res.data.result)
-        .then(
-          (ress) => {
-            var buf = Buffer.from(ress, 'base64')
-            conn.sendMessage(id, buf, MessageType.image)
-        })
-    })
-}
-if (text.includes("!randomhentai"))
-   {
-    var items = ["nsfwhentai", "anime hentai", "hentai", "nsfwneko"];
-    var cewe = items[Math.floor(Math.random() * items.length)];
-    var url = "https://api.fdci.se/rep.php?gambar=" + cewe;
-    
-    axios.get(url)
-      .then((result) => {
-        var b = JSON.parse(JSON.stringify(result.data));
-        var cewek =  b[Math.floor(Math.random() * b.length)];
-        imageToBase64(cewek) // Path to the image
-        .then(
-            (response) => {
-	var buf = Buffer.from(response, 'base64'); // Ta-da	
-              conn.sendMessage(
-            id,
-              buf,MessageType.image)
-       
-            }
-        )
-        .catch(
-            (error) => {
-                console.log(error); // Logs an error if there was one
-            }
-        )
-    
-    });
-    }
 if (text.includes("!puisi1")){
 const teks = text.replace(/!puisi1 /, "")
 axios.get(`https://arugaz.herokuapp.com/api/puisi1`).then((res) => {
