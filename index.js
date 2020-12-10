@@ -454,8 +454,8 @@ axios.get(`https://arugaz.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
 })
 }
 
-if (text.includes("!!sfrom")){
-const teks = text.replace(/!!sfrom /, "")
+if (text.includes("!sfrom")){
+const teks = text.replace(/!sfrom /, "")
 const sfrom = (`*───❉ ITSMEIKY BOT ❉──*\n ini link download dari savefrom \n\n https://savefrom.net/7/#url=${teks} \n\n Cara unduhnya⬇\n https://drive.google.com/file/d/1hrBvlPFpMTwB3N5mfcPeMUw1wR-vdqHc/view?usp=drivesdk`)
     conn.sendMessage(id, sfrom ,MessageType.text);
 }
