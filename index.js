@@ -512,7 +512,7 @@ axios.get(`https://rest.farzain.com/api/url.php?id=${teks}&apikey=ak52i3Znv8VSaa
 if (text.includes("!jadwaltv")){
 const teks = text.replace(/!jadwaltv /, "")
 axios.get(`http://api.farzain.com/acaratv.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK&type=separate`).then((res) => {
-	conn.sendMessage(id,  [WAIT] Sedang Mencari Channel...❗ , MessageType.text)
+	conn.sendMessage(id, '[WAIT] Sedang Mencari Channel...❗', MessageType.text)
     let hasil = `Nik Kak Ada :) \n\n *Jam* ${res.data.date.getHours} \n\n *Acara* ${res.data.acara}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
