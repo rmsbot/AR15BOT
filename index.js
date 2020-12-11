@@ -445,6 +445,27 @@ axios.get(`https://arugaz.herokuapp.com/api/fb?url=${teks}`).then((res) => {
 })
 }
 
+if (text.includes("!checkip"))
+  { const aris = text.replace(/!checkip /, "") 
+  axios.get(`https://mnazria.herokuapp.com/api/check?ip=${teks}`).then((res) =>{ 
+  let hasil = `➸ *City* : ${res.data.city}\n*Latitude* : ${res.data.latitude}\n*Longtitude* : ${res.data.longitude}\n*Region* : ${res.data.region_name}\n*Region Code* : ${res.data.region_code}\n*IP* : ${res.data.ip}\n*Type* : ${res.data.type}\n*Name* : ${res.data.name}\n*zip* : ${res.data.zip}\n*Geonime* : ${res.data.location.geoname_id}\n*Capital* : ${res.data.location.capital}\n*Calling* : ${res.data.location.calling_code}\n\n*Country Flag* : ${res.data.location.country_flag}\n\n*CountryFlagEmoji* : ${res.data.location.country_flag_emoji}` 
+  conn.sendMessage(id, hasil, MessageType.text); 
+ })
+ }
+ if (text.includes('!map')){
+  var aris = text.replace(/!map /, '')
+    axios.get('https://mnazria.herokuapp.com/api/maps?search='+teks)
+    .then((res) => {
+      imageToBase64(res.data.gambar)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[❗] WAIT SEDANG DIPROSES', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+}  
+       
 if (text.includes("!ig")){
 const teks = text.replace(/!ig /, "")
 axios.get(`https://alfians-api.herokuapp.com/api/ig?url=${teks}`).then((res) => {
@@ -588,6 +609,34 @@ axios.get(`https://arugaz.herokuapp.com/api/spamcall?no=${teks}`).then((res) => 
     let hasil = ` *INFO SPAM CALL* \n\n _${res.data.logs}_`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
+}
+
+if (text.includes('!cooltext')){
+  var aris = text.replace(/!cooltext /, '')
+    axios.get('https://api.haipbis.xyz/randomcooltext?text='+teks)
+    .then((res) => {
+      imageToBase64(res.data.image)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[❗] WAIT SEDANG DIPROSES', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
+} 
+
+if (text.includes('!nekonime')){
+  var aris = text.replace(/ /, '')
+    axios.get('https://arugaz.herokuapp.com/api/nekonime')
+    .then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, '[❗] WAIT SEDANG DIPROSES', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    })
 }
 if (text.includes("!memecreate")){
   var teks = text.replace(/.memecreate /, "")
