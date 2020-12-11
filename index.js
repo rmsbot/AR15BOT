@@ -371,7 +371,7 @@ axios.get(`http://inspirobot.me/api?generate=true`).then((res) => {
 }
 if (text.includes("!simi")){
 const teks = text.replace(/%s /, "")
-axios.get(`https://st4rz.herokuapp.com/api/simsimi?kata=${teks}`).then((res) => {
+axios.get(`https://arugaz.herokuapp.com/api/simisimi?kata=${teks}&apikey=~80~QbRVVT0.4arjt8dP~U.1acHFuW7IVI.nPolG`).then((res) => {
     let hasil = ` \n\n _${res.data.result}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
