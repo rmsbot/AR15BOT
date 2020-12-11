@@ -528,7 +528,7 @@ conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
 if (text.includes("!qr")){
 const teks = text.replace(/!qr /, "")
 axios.get(`https://api.farzain.com/qrcode.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
-conn.sendMessage(id,  [WAIT] Searching...❗ , MessageType.text)
+conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
     let hasil = ` *Nih Code Qr Kak :)*\n\n _${res.data.result}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
