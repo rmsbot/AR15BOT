@@ -704,7 +704,7 @@ axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
 if (text.includes("!jadwalbola")){
 const teks = text.replace(/!jadwalbola /, "")
 axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
-	conn.sendMessage(id,  [WAIT] Proses...❗ , MessageType.text)
+	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
     let hasil = ` ${res.data.desc} \n\n *Tanggal* _${res.data.tanggal}_ \n\n *Hari* _${res.data.hari}_  \n\n *Kick* _${res.data.kick}_ \n\n *Event* _${res.data.event}_ \n\n *Match* _${res.data.match}_ \n\n *Tv* _${res.data.tv}_`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
