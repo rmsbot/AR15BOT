@@ -509,6 +509,14 @@ axios.get(`https://rest.farzain.com/api/url.php?id=${teks}&apikey=ak52i3Znv8VSaa
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes("!jadwaltv")){
+const teks = text.replace(/!jadwaltv /, "")
+axios.get(`http://api.farzain.com/acaratv.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK&type=separate`).then((res) => {
+	conn.sendMessage(id,  [WAIT] Sedang Mencari Channel...❗ , MessageType.text)
+    let hasil = `Nik Kak Ada :) \n\n *Jam* ${res.data.date.getHours} \n\n *Acara* ${res.data.acara}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes("!tinyurl")){
 const teks = text.replace(/!tinyurl /, "")
 axios.get(`https://tinyurl.com/api-create.php?url=${teks}`).then((res) => {
@@ -606,7 +614,7 @@ if (text.includes(".randomhentai"))
    {
     var items = ["nsfwhentai", "anime hentai", "hentai", "nsfwneko"];
     var cewe = items[Math.floor(Math.random() * items.length)];
-    var url = "https://api.fdci.se/rep.php?gambar=" + cewe;
+    var url = "" + cewe;
     
     axios.get(url)
       .then((result) => {
@@ -666,7 +674,7 @@ if (text.includes("!brainly")){
 const teks = text.replace(/!brainly /, "")
 axios.get(`https://rest.farzain.com/api/brainly.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
 conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-    let hasil = ` *Nih Puisinya Kak :)*\n\n _${res.data.result}_ `;
+    let hasil = ` *Nih Kak Jawaban Nya :)*\n\n _${res.data}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
@@ -701,9 +709,17 @@ axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes("!buciners")){
+const teks = text.replace(/!gay /, "")
+axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
+	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
+    let hasil = ` ${res.data.desc} \n\n *Persen Bucin Lo!!!* _${res.data.persen}_`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
 if (text.includes("!jadwalbola")){
 const teks = text.replace(/!jadwalbola /, "")
-axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
+axios.get(`http://api.farzain.com/acaratv.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK&type=separate`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
     let hasil = ` ${res.data.desc} \n\n *Tanggal* _${res.data.tanggal}_ \n\n *Hari* _${res.data.hari}_  \n\n *Kick* _${res.data.kick}_ \n\n *Event* _${res.data.event}_ \n\n *Match* _${res.data.match}_ \n\n *Tv* _${res.data.tv}_`;
     conn.sendMessage(id, hasil ,MessageType.text);
