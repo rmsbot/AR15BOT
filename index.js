@@ -292,7 +292,7 @@ else if (text == 'Mas'){
 conn.sendMessage(id, ' _Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#menuall* untuk melihat fitur bot kami🙏_ ' ,MessageType.text);
 }
 else if (text == '#help'){
-conn.sendMessage(id,   _Maaf Perintah Sudah Di Ganti Silahkan Ketik *#menuall*🙏_   ,MessageType.text);
+conn.sendMessage(id, ' _Maaf Perintah Sudah Saya Ganti Silahkan Untuk Memanggil BOT Ketik *#menuall*🙏_ ' ,MessageType.text);
 }
 else if (text == 'Mba'){
 conn.sendMessage(id, ' _Iyah aku disini kak...ada yang bisa kami bantu? Ketik *#menuall* untuk melihat fitur bot kami🙏_ ' ,MessageType.text);
