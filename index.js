@@ -25,7 +25,7 @@ const fetch = require('node-fetch');
 const urlencode = require("urlencode");
 const axios = require("axios");
 const imageToBase64 = require('image-to-base64');
-const aris = require("./lib/menu.js");
+const aris = require("./lib/aris.js");
 const donate = require("./lib/donate.js");
 const info = require("./lib/info.js");
 const aris1 = require("./lib/aris1.js");
@@ -961,7 +961,7 @@ switch(bulan) {
 }
 var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + tahun;
 var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
-conn.sendMessage(id, menu.menu(id, A187, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwhatsapp, youtube) ,MessageType.text);
+conn.sendMessage(id, aris.aris(id, A187, corohelp, tampilTanggal, tampilWaktu, instagram, nomer, aktif, groupwhatsapp, youtube) ,MessageType.text);
 }
 if (text == '#menu1'){
 const corohelp = await get.get('https://covid19.mathdro.id/api/countries/id').json()
