@@ -525,14 +525,6 @@ conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
-if (text.includes("!qr")){
-const teks = text.replace(/!qr /, "")
-axios.get(`https://api.farzain.com/qrcode.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
-conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-    let hasil = ` *Nih Code Qr Kak :)*\n\n _${res.data.result}_ `;
-    conn.sendMessage(id, hasil ,MessageType.text);
-})
-}
 if (text.includes("!puisi2")){
 const teks = text.replace(/!puisi2 /, "")
 axios.get(`https://arugaz.herokuapp.com/api/puisi3`).then((res) => {
@@ -647,6 +639,15 @@ axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
 })
 }
 
+ if (text.includes("!codeqr")){
+const teks = text.replace(/!qr /, "")
+axios.get(`https://api.farzain.com/qrcode.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
+	conn.sendMessage(id,  [WAIT] Proses...❗ , MessageType.text)
+    let hasil = ` _${res.data.desc}_ `;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+
 if (text.includes("!tts")){
 const teks = text.replace(/!tts /, "")
 const gtts = (`https://rest.farzain.com/api/tts.php?id=${teks}`)
@@ -697,6 +698,14 @@ const teks = text.replace(/!gay /, "")
 axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
 	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
     let hasil = ` ${res.data.desc} \n\n *Persen Gay Lo!!!* _${res.data.persen}_`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}
+if (text.includes("!jadwalbola")){
+const teks = text.replace(/!jadwalbola /, "")
+axios.get(`https://arugaz.herokuapp.com/api/howgay`).then((res) => {
+	conn.sendMessage(id,  [WAIT] Proses...❗ , MessageType.text)
+    let hasil = ` ${res.data.desc} \n\n *Tanggal* _${res.data.tanggal}_ \n\n *Hari* _${res.data.hari}_  \n\n *Kick* _${res.data.kick}_ \n\n *Event* _${res.data.event}_ \n\n *Match* _${res.data.match}_ \n\n *Tv* _${res.data.tv}_`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
