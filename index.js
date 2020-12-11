@@ -583,7 +583,7 @@ axios.get(`https://arugaz.herokuapp.com/api/spamcall?no=${teks}`).then((res) => 
 }
 if (text.includes("!memecreate")){
   var teks = text.replace(/.memecreate /, "")
-    axios.get(`https://mnazria.herokuapp.com/api/create-meme?text-atas=${teks}`).then((res) => {
+    axios.get(`http://api.farzain.com/meme.php?apikey=ak52i3Znv8VSaaPTpu000mybK&kata1=${teks}&kata2=${teks}&pict=https://kucingpedia.com/wp-content/uploads/2016/06/Gambar-Kucing-Gemuk-Lucu.jpg`).then((res) => {
       imageToBase64(res.data.result)
         .then(
           (ress) => {
