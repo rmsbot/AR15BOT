@@ -1,14 +1,14 @@
 9/*
 * JANGAN UBAH-UBAH INFO!!!
 * "JANGAN MODAL NAMA DOANG BRO!!!"
-* SCRIPT BY ARIS187 ID
+* SCRIPT BY ITSMEIKYXSEC404
 * JANGAN MODAL NAMA DOANG BOSQ
 * HARGAILAH YY MEMBUAT SCRIPT INI BOSQ
 * JANGAN UBAH-UBAH INFO!!!
-* ARIS187 ID
+* ITSMEIKYXSEC404
 * BOLEH UBAH TAPI KECUALI INFO!!!
 */
-const A187 = '👾Itsmeiky BOT👾'; // JANGAN UBAH-UBAH INFO!!!
+const A187 = '⚡⌁Itsmeiky BOT⌁⚡'; // JANGAN UBAH-UBAH INFO!!!
 const instagram = 'https://instagram.com/itsmeikyxsec404'; // JANGAN UBAH-UBAH INFO!!!
 const nomer = 'Wa.me/+6281281872699'; // JANGAN UBAH-UBAH INFO!!!
 const aktif = 'Tergantung Kuota Selagi Ada Yang Donasi Pasti On Terus'; // JANGAN UBAH-UBAH INFO!!!
