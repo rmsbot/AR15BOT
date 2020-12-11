@@ -642,8 +642,8 @@ axios.get(`https://arugaz.herokuapp.com/api/howbucins`).then((res) => {
  if (text.includes("!codeqr")){
 const teks = text.replace(/!qr /, "")
 axios.get(`https://api.farzain.com/qrcode.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
-	conn.sendMessage(id,  [WAIT] Proses...❗ , MessageType.text)
-    let hasil = ` _${res.data.desc}_ `;
+	conn.sendMessage(id, '[WAIT] Proses...❗', MessageType.text)
+    let hasil = ` _${res.data.result}_ `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
