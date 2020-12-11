@@ -756,6 +756,86 @@ axios.get(`https://api.terhambar.com/ninja?nama=${teks}`).then((res) => {
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
+if (text.includes("!hostsearch")){
+const aris = text.replace(/!hostsearch /, "")
+axios.get(`https://api.banghasan.com/domain/hostsearch/${teks}`).then((res) => {
+    let hasil = `*query : ${res.data.query}*\n\nhasil : ${res.data.hasil}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+  })
+ }
+if (text.includes("!spamgmail")){
+const aris = text.replace(/!spamgmail /, "")
+axios.get(`https://arugaz.herokuapp.com/api/spamgmail?target=${teks}&jum=1`).then((res) => {
+    let hasil = `${res.data.logs}`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+})
+}  
+if (text.includes("!zodiak")){
+const aris = text.replace(/!zodiak /, "")
+axios.get(`https://arugaz.herokuapp.com/api/getzodiak?nama=aruga&tgl-bln-thn=${teks}`).then((res) => {
+    let hasil = `➡️ Lahir : ${res.data.lahir}*\n➡ ️ultah : ${res.data.ultah}\n➡ ️usia : ${res.data.usia}\n➡ zodiak : ${res.data.zodiak}️`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+  })
+ }
+if (text.includes("!ttsid")){
+const aris = text.replace(/!tts /, "")
+axios.get(`http://scrap.terhambar.com/tts?kata=${teks}`).then((res) => {
+	var aris = text.split("!ttsid ")[1];
+  var path = require('path');
+  var text1 = aris.slice(6);
+  text1 = suara;
+  var suara = text.replace(/!ttsid/g, text1);
+  var filepath = 'mp3/bacot.wav';
+  
+  
+/*
+ * save audio file
+ */
+
+gtts.save(filepath, suara, function() {
+  console.log(`${filepath} MP3 SAVED=`)
+});
+const buffer = fs.readFileSync(filepath)
+	conn.sendMessage(id , buffer , MessageType.audio);
+
+})
+}
+if (text.includes("!meme1"))
+   {
+    var items = ["funny meme", "meme", "meme 2020"];
+    var cewe = items[Math.floor(Math.random() * items.length)];
+    var url = "https://api.fdci.se/rep.php?gambar=" + cewe;
+    
+    axios.get(url)
+      .then((result) => {
+        var b = JSON.parse(JSON.stringify(result.data));
+        var cewek =  b[Math.floor(Math.random() * b.length)];
+        imageToBase64(cewek) // Path to the image
+        .then(
+            (response) => {
+	var buf = Buffer.from(response, 'base64'); // Ta-da	
+              conn.sendMessage(
+            id,
+              buf,MessageType.image)
+       
+            }
+        )
+        .catch(
+            (error) => {
+                console.log(error); // Logs an error if there was one
+            }
+        )
+    
+    });
+    } 
+
+ if (text.includes("!zodiak")){
+const aris = text.replace(/!zodiak /, "")
+axios.get(`https://arugaz.herokuapp.com/api/getzodiak?nama=aruga&tgl-bln-thn=${aris}`).then((res) => {
+    let hasil = `➡️ Lahir : ${res.data.lahir}*\n➡ ️ultah : ${res.data.ultah}\n➡ ️usia : ${res.data.usia}\n➡ zodiak : ${res.data.zodiak}️`;
+    conn.sendMessage(id, hasil ,MessageType.text);
+  })
+ }
 if (text.includes("!createqts")){
 const teks = text.replace(/!createqts /, "")
 axios.get(`https://terhambar.com/aw/qts/?kata=${teks}`).then((res) => {
