@@ -725,8 +725,8 @@ axios.get(`https://arugaz.herokuapp.com/api/dewabatch?q=${teks}`).then((res) => 
 if (text.includes("!brainly")){
 const teks = text.replace(/!brainly /, "")
 axios.get(`https://rest.farzain.com/api/brainly.php?id=${teks}&apikey=ak52i3Znv8VSaaPTpu000mybK`).then((res) => {
-conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
-    let hasil = ` *Nih Kak Jawaban Nya :)*\n\n _${res.data}_ `;
+	conn.sendMessage(id, '[WAIT] Searching...❗', MessageType.text)
+    let hasil = ` *👩‍💻Menurut Brainly Ini Jawaban Ny:👩‍💻* \n\n _${res.data.result}_ \n\n *Url* ${res.data.url} `;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
 }
